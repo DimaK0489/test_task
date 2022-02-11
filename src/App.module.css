@@ -1,0 +1,9 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.preloader {
+  position: fixed;
+  margin: 450px;
+}

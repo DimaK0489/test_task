@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import style from "./App.module.css";
+import {PicturesList} from "./Components/PicturesList/PicturesList";
+import {AppRootStateType} from "./Store/Store";
+import {useSelector} from "react-redux";
+import {RequestStatusType} from "./Store/App-reducer";
+import {CircularProgress} from "@material-ui/core";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const status = useSelector<AppRootStateType, RequestStatusType>((state) => state.app.status)
+    return (
+        <div className={style.App}>
+            {status === "loading" && <CircularProgress className={style.preloader} color={"secondary"}/>}
+            <PicturesList/>
+        </div>
+    );
 }
 
 export default App;
