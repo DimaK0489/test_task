@@ -6,7 +6,7 @@ import {useSelector} from "react-redux";
 import {RequestStatusType} from "./Store/App-reducer";
 import {CircularProgress} from "@material-ui/core";
 
-function App() {
+export const App: React.FC = () => {
     const status = useSelector<AppRootStateType, RequestStatusType>((state) => state.app.status)
     return (
         <div className={style.App}>
@@ -15,5 +15,3 @@ function App() {
         </div>
     );
 }
-
-export default App;

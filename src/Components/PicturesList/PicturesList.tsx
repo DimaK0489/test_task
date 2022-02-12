@@ -15,12 +15,13 @@ export const PicturesList: React.FC = () => {
     useEffect(() => {
         dispatch(getPicturesListTC())
     }, [dispatch]);
+
     useEffect(() => {
         setFoundPhotos(pictures)
     }, [pictures]);
 
-    const onSearchHandler = (ev: ChangeEvent<HTMLInputElement>) => {
-        const value = ev.currentTarget.value
+    const onSearchHandler = (event: ChangeEvent<HTMLInputElement>) => {
+        const value = event.currentTarget.value
         const results = pictures.filter((item) => {
             return `${item.id}`.indexOf(value) > -1
                 || item.title.toLowerCase().indexOf(value) > -1

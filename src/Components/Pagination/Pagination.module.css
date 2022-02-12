@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding-top: 20px;
 }
+
 .deleteButton {
     text-decoration: none;
     display: inline-block;
@@ -12,7 +13,7 @@
     padding: 5px 15px;
     margin: 10px 20px;
     border-radius: 15px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     background-image: linear-gradient(to left, #118c10 0%, #a1e083 50%, #118c10 100%);
@@ -20,9 +21,11 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, .1);
     transition: .5s;
 }
+
 .deleteButton:hover {
     background-position: right center;
 }
+
 .item {
     display: flex;
     flex-direction: column;
@@ -31,9 +34,11 @@
     align-items: flex-start;
     font-size: 20px;
 }
+
 .pagination {
     padding-top: 20px;
 }
+
 img.zoom {
     -moz-user-select: none; user-select: none;
 }

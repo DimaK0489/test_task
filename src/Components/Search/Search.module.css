@@ -9,6 +9,7 @@
     position: relative;
     transition: .3s linear;
 }
+
 .button {
     text-decoration: none;
     display: inline-block;
@@ -17,7 +18,7 @@
     line-height: 45px;
     border-radius: 45px;
     margin: 10px 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 11px;
     text-transform: uppercase;
     text-align: center;
@@ -29,6 +30,7 @@
     transition: .3s;
     cursor: pointer;
 }
+
 .button:hover {
     background: #6d1077;
     box-shadow: 0 15px 20px rgba(173, 35, 155, 0.5);

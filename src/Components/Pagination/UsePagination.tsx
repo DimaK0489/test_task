@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {PicturesType} from "../../Api/Types";
 
 export const usePagination = (data: PicturesType[], itemsPage: number) => {
@@ -16,5 +16,5 @@ export const usePagination = (data: PicturesType[], itemsPage: number) => {
         setCurrentPage(currentPage => Math.min(pageNumber, maxPage));
     }
 
-    return { jump, currentData, currentPage, maxPage };
+    return {jump, currentData, currentPage, maxPage};
 }
