@@ -34,3 +34,24 @@
 .pagination {
     padding-top: 20px;
 }
+img.zoom {
+    -moz-user-select: none; user-select: none;
+}
+img.zoom:hover {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 99%;
+    max-height: 99%;
+    border: solid rgba(210,210,210,.4);
+    border-width: 100vh 100vw;
+    cursor: zoom-out;
+}
+:not(:active) > img.zoom:not(:hover), img.zoom:active {
+    pointer-events: none;
+}

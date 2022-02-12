@@ -23,23 +23,26 @@ export const PicturesList: React.FC = () => {
         const value = ev.currentTarget.value
         const results = pictures.filter((item) => {
             return `${item.id}`.indexOf(value) > -1
-            || item.title.toLowerCase().indexOf(value) > -1
+                || item.title.toLowerCase().indexOf(value) > -1
         })
         setFoundPhotos(results);
     }
 
-    return (
-        <div className={"container"}>
-            <Search searchHandler={onSearchHandler}/>
-            {foundPhotos.map(photo => {
-                return <div key={photo.id}>
-                    <span>{photo.id}</span>
-                    <a href={photo.url}>{photo.url}</a>
-                    <span>{photo.title}</span>
-                    <a href={photo.thumbnailUrl}>{photo.thumbnailUrl}</a>
+    const searchList = () => {
+        return foundPhotos.map(photoId => {
+            return <div key={photoId.id}>
+                <br/>
+                <span>{photoId.id}</span>
+                <br/>
+                <a href={photoId.url}>{photoId.url}</a>
+            </div>
+        })
+    }
 
-                </div>
-            })}
+    return (
+        <div>
+            <Search searchHandler={onSearchHandler}/>
+            {searchList()}
             <PaginationControlled/>
         </div>
     );

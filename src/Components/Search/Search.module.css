@@ -9,9 +9,6 @@
     position: relative;
     transition: .3s linear;
 }
-.input:focus {
-    width: 580px;
-}
 .button {
     text-decoration: none;
     display: inline-block;
